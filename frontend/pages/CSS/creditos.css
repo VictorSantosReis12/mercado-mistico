@@ -1,0 +1,41 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    position: relative; /* Pra conseguir usar absolute no secao_centro */
+    background-color: var(--azulEscuro);
+    width: 100vw;
+}
+
+#titulo {
+    font-family: "Inknut Antiqua";
+    font-size: 40px;
+    font-weight: 400;
+    padding: 3.2vh 0px 0px 8.9vw;
+    color: var(--amarelo);
+}
+
+#secao_centro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Pra conseguir centralizar o elemento na main */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#imagem_centro {
+    height: 35vh;
+}
+
+#textinho_centro {
+    font-family: "Inknut Antiqua";
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--branco);
+}

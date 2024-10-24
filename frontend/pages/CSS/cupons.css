@@ -1,0 +1,183 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--azulEscuro);
+    width: 100vw;
+}
+
+#titulo {
+    font-family: "Inknut Antiqua";
+    font-size: 6vh;
+    font-weight: 400;
+    padding: 3.2vh 0px 0px 8.9vw;
+    color: var(--amarelo);
+    position: relative;
+    z-index: 1;
+}
+
+#secao_centro {
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#imagem_centro {
+    height: 30vh;
+}
+
+#textinho_centro {
+    font-family: "Inknut Antiqua";
+    font-size: 3vh;
+    font-weight: 400;
+    color: var(--branco);
+    text-align: center;
+}
+
+/* Essa linha é a que está embaixo do título "Seus registros" */
+#linha_horizontal_divisora {
+    width: calc(91.1vw - 30px);
+    border: 2.5px solid var(--vermelhoAlaranjado);
+    position: relative;
+    z-index: 1;
+    margin-left: 8.9vw;
+}
+
+/* Disponibilidade de cupons */
+
+#secao_disponibilidade {
+    background-color: var(--azulMaisEscuro);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 1.25rem;
+    width: 82.8vw;
+    margin: 0px auto;
+}
+
+.disponibilidade_cupons {
+    font-family: "Inknut Antiqua";
+    font-size: 3.5vh;
+    font-weight: 400;
+    color: var(--amarelo);
+    position: relative;
+    text-decoration: none;
+}
+
+.disponibilidade_cupons::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.5vh;
+    background: var(--vermelhoAlaranjado);
+    bottom: 1vh;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.disponibilidade_cupons:hover::after {
+    transform: scaleX(1);
+}
+
+#sublinhadoDisponivel, #sublinhadoIndisponivel {
+    position: absolute;
+    width: 100%;
+    height: 0.5vh;
+    background: var(--vermelhoAlaranjado);
+    bottom: 1vh;
+    left: 0;
+}
+
+#sublinhadoIndisponivel {
+    display: none;
+}
+
+#secao_disponivel {
+    display: none;
+    flex-direction: column;
+    padding-top: 4vh;
+    padding-left: 8vw;
+    align-items: flex-start;
+}
+
+#secao_nao_disponivel {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4vh;
+    padding-left: 8vw;
+    align-items: flex-start;
+    opacity: 50%;
+}
+
+.divCupom {
+    border-top: 0.5vh solid var(--amarelo);
+    background-color: var(--verdeMusgo);
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 1.8vw 1vh 1.8vw;
+    align-items: flex-start;
+    border-radius: 0.5vh;
+    height: 13vh;
+    width: 13vw;
+}
+
+#divcupomTitulo {
+    width: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#valorCupom {
+    font-family: "Inknut Antiqua";
+    font-size: 2vh;
+    font-weight: 400;
+    color: var(--branco);
+}
+
+#mensagemExpira {
+    font-family: "Inknut Antiqua";
+    font-size: 1.7vh;
+    font-weight: 400;
+    color: var(--amarelo);
+}
+
+#valorMinimo {
+    font-family: "Inder";
+    font-size: 1vh;
+    font-weight: 400;
+    color: var(--branco);
+    margin-top: -1vh;
+    padding-bottom: 3vh;
+}
+
+.listaCupom {
+    padding-left: 0.8vw;
+}
+
+.codigoCupom {
+    font-family: "Inder";
+    font-size: 1.4vh;
+    font-weight: 400;
+    color: var(--branco);
+}
+
+.dataCupom {
+    font-family: "Inder";
+    font-size: 1.4vh;
+    font-weight: 400;
+    color: var(--branco);
+}
+
+.divCupom:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}

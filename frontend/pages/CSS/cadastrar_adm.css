@@ -1,0 +1,185 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    background-color: var(--azulEscuro);
+    width: 100vw;
+    display: flex;
+}
+
+#lista_adm {
+    width: 50vw;
+}
+
+#divTitulo {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    padding-top: 2vh;
+    padding-left: 5vw;
+    padding-bottom: 6vh;
+}
+
+#titulo_amarelo {
+    font-family: "Inknut Antiqua";
+    font-size: 1.75vw;
+    font-weight: 400;
+    padding-left: 2vw;
+    color: var(--amarelo);
+}
+
+#adicionar_adm {
+    width: 60vw;
+    background-color: var(--azulMaisEscuro);
+}
+
+.entradas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vh;
+    padding-left: 2vw;
+    padding-bottom: 5vh;
+}
+
+.label_lista {
+    font-family: "Inder";
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--branco);
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.email {
+    font-family: "Inder";
+    font-weight: 400;
+    background-color: var(--ciano);
+    color: var(--branco);
+    padding: 1vh 1vw;
+    width: 30vw;
+    font-size: 3vh;
+    height: 4vh;
+    border-bottom: 2px solid var(--preto);
+    border-radius: 0.5rem;
+}
+
+.div_excluir {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 6vw;
+}
+
+.imagem_excluir {
+    height: 5vh;
+}
+
+.texto_excluir {
+    font-family: "Inder";
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: var(--branco);
+}
+
+.div_excluir:hover {
+    cursor: pointer;
+    filter: invert(57%) sepia(74%) saturate(498%) hue-rotate(5deg) brightness(153%) contrast(84%);
+}
+
+#adicionar_adm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10vh;
+    position: relative;
+}
+
+#titulo_branco {
+    font-family: "Inknut Antiqua";
+    font-size: 2.2vw;
+    font-weight: 400;
+    color: var(--branco);
+}
+
+.entradas_adicionar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    padding: 4vh 2vw 4vh 0;
+}
+
+.label_adicionar {
+    font-family: "Inder";
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--branco);
+    padding-left: 1vw;
+}
+
+.email_adicionar {
+    font-family: "Inder";
+    font-weight: 400;
+    background-color: var(--ciano);
+    color: var(--branco);
+    padding: 1vh 1vw;
+    width: 30vw;
+    font-size: 3vh;
+    height: 5vh;
+    border-bottom: 2px solid var(--preto);
+    border-radius: 0.5rem;
+}
+
+#texto_adicionar {
+    font-family: "Inder";
+    font-size: 1vw;
+    font-weight: 400;
+    color: var(--branco);
+    width: 30vw;
+}
+
+#div_selecionar {
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+    align-self: flex-start;
+    padding-left: 15vw;
+    padding-top: 5vh;
+}
+
+#checkbox {
+    height: 5vh;
+}
+
+#texto_checkbox {
+    font-family: "Inder";
+    font-size: 2.5vh;
+    font-weight: 400;
+    color: var(--branco);
+}
+
+#botao_adicionar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5vh 2vw;
+    background-color: var(--amarelo);
+    border-radius: 2vh;
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    color: var(--branco);
+    font-size: 2.75vh;
+    margin-bottom: 4.5vh;
+    margin-right: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

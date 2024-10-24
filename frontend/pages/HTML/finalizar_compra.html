@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - Mystic Market</title>
+    <link rel="stylesheet" href="./pages/CSS/finalizar_compra.css">
+    <link rel="stylesheet" href="./pages/CSS/style.css">
+    <script defer src="./pages/JS/finalizar_compra.js"></script>
+    <script defer src="./pages/JS/geral.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header_esquerda">
+            <a href="/" class="auxHeader"><img src="../../assets/logo.png" alt="Logo" id="logo"></a>
+            <a href="/" id="nome_do_site">Mystic Market</h1></a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="../../assets/coracao.png" alt="Coração" id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="../../assets/carrinho.png" alt="Carrinho" id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="../../assets/usuarioLogado.png" alt="Usuário Logado" id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <main>
+        <div id="divBlur"></div>
+        <section class="secaoPrincipal">
+            <div id="divCredito">
+                <div id="subdivCredito">
+                    <p id="mensagemCredito">Só é possível resgatar os créditos em comprar de produtos para desconto</p>
+                    <img src="../../assets/fechar_amarelo.png" alt="Fechar" id="fechar">
+                </div>
+                <p id="totalCredito">Total: 340</p>
+                <p id="maximoCredito">Máximo disponível para compra: 100</p>
+                <div id="divinputCredito">
+                    <input type="text" placeholder="Insira os pontos" id="inputCredito">
+                    <button id="botaoTudo">Tudo</button>
+                </div>
+                <button id="botaoFeito">Feito</button>
+            </div>
+            <div id="divTitulo">
+                <img src="../../assets/seta_volta.png" alt="seta" class="seta_volta_com_titulo">
+                <h2 id="tituloFinalizar">Finalizar Compra</h2>
+            </div>
+            <section id="secaoSecundaria">
+                <section id="secaoEsquerda">
+                    <h4 class="textosMenores" id="resumo">Resumo do Pedido</h4>
+                    <section id="listaProdutos">
+                        <img src="../../assets/seta.svg" alt="seta" id="seta_produto_esquerda">
+                        <div id="produtosCarrinho">
+                            <img src="" alt="produto1" id="produto_um">
+                            <img src="" alt="produto2" id="produto_dois">
+                            <img src="" alt="produto3" id="produto_tres">
+                        </div>
+                        <img src="../../assets/seta.svg" alt="seta" id="seta_produto_direita">
+                    </section>
+                    <div id="divCodigo">
+                        <input type="text" placeholder="Insira seu código" id="inputCodigo">
+                        <button id="botaoCodigo">Solicitar</button>
+                    </div>
+                    <section id="secaoEsquerdaLista">
+                        <a class="secaoEsquerdaLista_Item" href="/cupons">
+                            <h4 class="textosMenores">Cupons</h4>
+                            <img src="../../assets/seta.svg" alt="seta" class="seta">
+                        </a>
+                        <a class="secaoEsquerdaLista_Item" onclick="creditos()">
+                            <h4 class="textosMenores">Créditos</h4>
+                            <img src="../../assets/seta.svg" alt="seta" class="seta">
+                        </a>
+                        <a class="secaoEsquerdaLista_Item" href="/cartao_presente">
+                            <h4 class="textosMenores">Cartão presente</h4>
+                            <img src="../../assets/seta.svg" alt="seta" class="seta">
+                        </a>
+                    </section>
+                    <div id="divTotal">
+                        <h4 class="textosMenores">Total</h4>
+                        <h4 class="textosMenores" id="preco_total">R$ 0000,00</h4>
+                    </div>
+                </section>
+                <section id="secaoDireita">
+                    <h2 class="textosMaiores">Enviar para</h2>
+                    <div class="divCaixa" id="divEndereco">
+                        <div class="subdivCaixa_cima">
+                            <h4 class="textosMenores" id="nomeCompleto">,</h4>
+                            <h4 class="textosMenores" id="numeroResidencia">Número da Residência: 00</h4>
+                        </div>
+                        <h4 class="textosMenores" id="endereco"></h4>
+                        <div class="subdivCaixa_baixo">
+                            <h4 class="textosMenores" id="cep">CEP: 00000-000</h4>
+                            <a href="/enderecos" class="textosMenores" id="editar">Editar</a>
+                        </div>
+                    </div>
+                    <div class="divCaixa" id="divEnderecoErro">
+                        <div class="subdivCaixa_erro">
+                            <h4 class="textosMenores">Não tem endereço padrão</h4>
+                        </div>
+                        <div class="subdivCaixa_selecionar">
+                            <a href="/enderecos" class="textosMenores" id="selecionar">Selecionar</a>
+                        </div>
+                    </div>
+                    <h2 class="textosMaiores">Método de envio</h2>
+                    <div class="divCaixa">
+                        <h4 class="textosMenores">Envio especial: Teletransporte</h4>
+                        <h4 class="textosMenores">Tempo de entrega: Instantâneo</h4>
+                        <div class="subdivCaixa_baixo">
+                            <h4 class="textosMenores">Impostos e tarifas serão pagos pelos clientes</h4>
+                            <h4 class="textosMenores">R$ 0,00</h4>
+                        </div>
+                    </div>
+                    <button id="botaoFinalizar" onclick="finalizarCompra()">FINALIZAR COMPRA</button>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

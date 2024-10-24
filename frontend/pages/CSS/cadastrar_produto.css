@@ -1,0 +1,129 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#divTitulo {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    padding: 1.7vh 3.2vw;
+}
+
+#tituloCadastro {
+    color: var(--amarelo);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 3.3vh;
+}
+
+#formCadastro {
+    margin-left: -9vw;
+    width: 80vw;
+    display: flex;
+    gap: 2vw;
+}
+
+label {
+    color: var(--branco);
+    font-family: "Inder";
+    font-size: 2.5vh;
+    font-weight: 400;
+}
+
+.entradas_imagem {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
+#imagemInput {
+    display: none; /* Oculta o input de arquivo */
+}
+
+#imagemPreview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inder";
+    font-weight: 400;
+    background-color: var(--ciano);
+    color: var(--branco);
+    font-size: 2.5vh;
+    border-radius: 0.5vh;
+    padding: 7vh 3.5vw;
+    cursor: pointer;
+    text-align: center;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1; /* Mantém a proporção 1:1 (quadrado) */
+    width: 12vw; /* Largura fixa para o quadrado */
+    height: 12vw; /* Altura fixa para o quadrado */
+}
+
+#botaoCadastrar {
+    background-color: var(--vermelhoAlaranjado);
+    border-radius: 1.5vh;
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 2vh;
+    color: var(--branco);
+    align-self: center;
+    padding: 2vh 2vw;
+}
+
+#secao_form_direita {
+    width: 46vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 4vw;
+    gap: 2vh;
+}
+
+.entradas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.entradas > input {
+    font-family: "Inder";
+    font-weight: 400;
+    background-color: var(--ciano);
+    color: var(--branco);
+    width: 55vw;
+    font-size: 2.5vh;
+    height: 3vh;
+    border-radius: 0.5vh;
+    padding: 1vh 1vw;
+}
+
+#descricaoInput {
+    font-family: "Inder";
+    font-weight: 400;
+    background-color: var(--ciano);
+    color: var(--branco);
+    width: 55vw;
+    font-size: 2.5vh;
+    border-radius: 0.5vh;
+    padding: 1vh 1vw;
+    overflow-y: auto; /* Adiciona uma barra de rolagem se o texto exceder o tamanho */
+    height: 10vh; /* Altura maior para o textarea */
+}
+
+/* Remover as setas de aumento/diminuição em inputs do tipo number */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

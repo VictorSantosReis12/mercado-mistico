@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    background-color: var(--azulEscuro);
+    display: flex;
+    justify-content: center;
+}
+
+.secaoCompra {
+    width: 90.13vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+#divTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: -2vw;
+}
+
+#tituloCartaoPresente {
+    color: var(--amarelo);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 2vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.entradas {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.nomeInput {
+    display: flex;
+    gap: 3.95vw;
+}
+
+label {
+    color: var(--branco);
+    font-family: "Inder";
+    font-size: 13px;
+}
+
+input {
+    background-color: var(--azulMaisEscuro);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 13px;
+    border-bottom: 2px solid var(--preto);
+    border-radius: 0.5rem;
+    color: var(--branco);
+}
+
+#valor,
+#mensagem {
+    height: 4vh;
+    width: 90.13vw;
+}
+
+#name,
+#email {
+    height: 2vh;
+    width: 23.47vw;
+}
+
+#buttonSubmit {
+    background-color: var(--vermelhoAlaranjado);
+    color: var(--branco);
+    border: 0;
+    border-radius: 20px;
+    padding: 0px 1rem;
+    text-shadow: none;
+    font-family: "Inknut Antiqua";
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

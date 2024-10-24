@@ -1,0 +1,189 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#secaoSelecionarEFinalizar {
+    width: 75vw;
+    background-color: var(--azulMaisEscuro);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 8px;
+    margin: 2rem 0px 1.5rem 0px;
+}
+
+#divSelecionarTodosEsquerda {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#selecionarTodos {
+    width: 1.8vw;
+}
+
+#selecionarTodosMarcado {
+    width: calc(1.8vw + 2px);
+}
+
+#todosItens {
+    color: var(--amarelo);
+    font-family: "Inknut Antiqua";
+    font-size: 2.5vh;
+}
+
+#botaoFinalizarCompra {
+    color: var(--amarelo);
+    border-radius: 5px;
+    font-family: "Inknut Antiqua";
+    font-size: 2.5vh;
+    font-weight: 400;
+    padding: 0px 1.5rem;
+    background-color: var(--verdeMusgo);
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 1.25vw;
+    aspect-ratio: 1 / 1;
+    border: 1.5px solid var(--amarelo);
+    border-radius: 3px;
+}
+
+.checkboxMarcado {
+    width: calc(1.25vw + 2px);
+}
+
+#listaProdutos {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 1rem;
+}
+
+.escondido {
+    display: none;
+}
+
+.secaoDesmarcada {    
+    filter: opacity(0.5);
+}
+
+.produto {
+    position: relative;
+    margin-left: 2vw;
+    display: flex;
+    width: 90vw;
+    gap: 1.5vw;
+}
+
+.divAuxImagem {
+    height: 25vh;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.imagemProduto {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5vh;
+    object-fit: contain;
+}
+
+.nomeProduto {
+    font-size: 3.5vh;
+    font-family: "Inknut Antiqua";
+    color: var(--amarelo);
+    cursor: pointer;
+    white-space: nowrap; /* Evita quebra de linha */
+    line-height: 1;
+}
+
+.precoProduto {
+    font-size: 2.5vh;
+    font-family: "Inder";
+    font-weight: 400;
+    color: var(--branco);
+    margin-top: auto;
+    margin-bottom: 3px;
+}
+
+.subdiv_produto {
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+}
+
+.titulo_produto {
+    display: flex;
+    justify-content: space-between;
+    width: 77vw;
+}
+
+.excluir {
+    height: 5vh;
+}
+
+.coracao {
+    height: 5vh;
+    margin-top: 0.5vh;
+    filter: saturate(0%);
+}
+
+.emEstoque {
+    color: var(--vermelhoAlaranjado);
+    font-size: 3vh;
+    font-family: "Inder";
+    margin: 1.3vh 0px 3vh 0px;
+}
+
+.semEstoque {
+    color: var(--verdeMusgo);
+    font-size: 1.25rem;
+    font-family: "Inder";
+    margin: 1.3vh 0px 3vh 0px;
+}
+
+.subdiv_produto_imagens {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+.excluir:hover {
+    cursor: pointer;
+    filter: invert(57%) sepia(74%) saturate(498%) hue-rotate(5deg) brightness(153%) contrast(84%);
+}
+
+.coracao:hover {
+    cursor: pointer;
+    filter: invert(57%) sepia(74%) saturate(498%) hue-rotate(5deg) brightness(153%) contrast(84%);
+}
+
+.qtd {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: var(--branco);
+    font-family: "Inder";
+    background-color: var(--vermelhoAlaranjado);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

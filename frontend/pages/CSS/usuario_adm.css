@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    background-color: var(--azulEscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#secaoeditarUsuario {
+    z-index: 5;
+    background-color: var(--verdeOpaco);
+    height: 50vh;
+    width: 28vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4vh;
+    border-radius: 1.5vh;
+    border-bottom: 0.5vh solid var(--preto);
+}
+
+#divEditar {
+    width: 24vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tituloEditar {
+    color: var(--amarelo);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 3.125vh;
+}
+
+#fechar {
+    height: 5.5vh;
+}
+
+#fechar:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 44vh;
+}
+
+.entradas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vh;
+    width: 24vw;
+    height: 12vh;
+}
+
+label {
+    color: var(--branco);
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 2.5vh;
+}
+
+.entradas > input {
+    background-color: var(--verdeMusgo);
+    color: var(--branco);
+    padding: 1vh 1vw;
+    width: 22vw;
+    font-size: 2.75vh;
+    height: 3.7vh;
+    border-bottom: 0.3 solid var(--preto);
+    border-radius: 1vh;
+}
+
+#botaoEditar {
+    background-color: var(--vermelhoAlaranjado);
+    border-radius: 1.5vh;
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 2.75vh;
+    color: var(--branco);
+    align-self: center;
+    padding: 1.5vh 1vw;
+}
+
+.secaoPrincipal {
+    width: 83.08vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+#divTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    top: 19vh;
+    margin-left: -4vw;
+}
+
+#tituloBemVindo {
+    color: var(--amarelo);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 3.125vh;
+    height: 100%;
+}
+
+.secoesSecundarias {
+    width: 80%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 30.35vw);
+    grid-template-rows: repeat(4, 11.99vh) 5vh;
+    column-gap: 5.9vw;
+    row-gap: 3.22vh;
+    grid-template-areas:
+        "estoque vendas"
+        "produtos vendas"
+        "cupons vendas"
+        "admins vendas"
+        "sair editar";
+}
+
+.topicosEsquerda {
+    display: flex;
+    align-items: center;
+    background-color: var(--verdeMusgo);
+    height: 100%;
+    width: 100%;
+    padding-left: 2.64vw;
+    gap: 1.73vw;
+    border-radius: 5px;
+}
+
+.topicosEsquerda_Texto {
+    color: var(--amarelo);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 3.125vh;
+}
+
+.topicoDireita {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--verdeMusgo);
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#subtopicoDireita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.topicoDireita_Titulo {
+    color: var(--branco);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 3.125vh;
+}
+
+.topicoDireita_Subtitulo_Verde {
+    color: var(--verdeEscuro);
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 2.5vh;
+}
+
+.topicoDireita_Subtitulo_Branco {
+    color: var(--branco);
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 2.5vh;
+}
+
+.topicoDireita_Subtitulo_Vermelho {
+    color: var(--vermelhoAlaranjado);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 4.125vh;
+}
+
+.imagens {
+    height: 7.5vh;
+}
+
+#sair {
+    color: var(--branco);
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 3.125vh;
+    grid-area: sair;
+}
+
+#excluir {
+    color: var(--branco);
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 3.125vh;
+}
+
+#divSair {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    grid-area: sair;
+}
+
+#editar_usuario {
+    color: var(--branco);
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 3.125vh;
+}
+
+#div_editar_usuario {
+    grid-area: editar;
+}
+
+#estoque {
+    grid-area: estoque;
+}
+
+#produtos {
+    grid-area: produtos;
+}
+
+#cupons {
+    grid-area: cupons;
+}
+
+#admins {
+    grid-area: admins;
+}
+
+#vendas {
+    grid-area: vendas;
+}
+
+#sair:hover {
+    border-bottom: 0.5vh solid var(--vermelhoAlaranjado);
+    cursor: pointer;
+}
+
+#excluir:hover {
+    border-bottom: 0.5vh solid var(--vermelhoAlaranjado);
+    cursor: pointer;
+}
+
+#editar_usuario:hover {
+    border-bottom: 0.5vh solid var(--ciano);
+    cursor: pointer;
+}
+
+.topicosEsquerda:hover {
+    cursor: pointer;
+    filter: brightness(115%);
+}

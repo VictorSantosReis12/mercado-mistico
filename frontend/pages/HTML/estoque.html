@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque - Mystic Market</title>
+    <link rel="stylesheet" href="./pages/CSS/style.css">
+    <link rel="stylesheet" href="./pages/CSS/estoque.css">
+    <script defer src="./pages/JS/estoque.js"></script>
+    <script defer src="./pages/JS/geral.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header_esquerda">
+            <a href="/" class="auxHeader"><img src="../../assets/logo.png" alt="Logo" id="logo"></a>
+            <a href="/" id="nome_do_site">Mystic Market</h1></a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="../../assets/coracao.png" alt="Coração" id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="../../assets/carrinho.png" alt="Carrinho" id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="../../assets/usuarioLogado.png" alt="Usuário Logado" id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <main>
+        <section id="secao_editar_produto">
+            <div id="divEditarTitulo">
+                <h3 id="tituloEditar">Editar produto</h3>
+                <img src="../../assets/fechar_amarelo.png" alt="Fechar" id="fechar" onclick="botaoFechar()">
+            </div>
+            <form action="/estoque" id="formProduto">
+                <input type="hidden" id="idProdutoHidden" name="idProduto">
+                <div class="entradas">
+                    <label for="nome" class="labelEditar">Nome do produto*</label>
+                    <input type="text" class="inputNome" id="nomeInput" name="nome" placeholder="Nome do produto" maxlength="255" required>
+                </div>
+                <div class="entradas">
+                    <label for="preco" class="labelEditar">Preço*</label>
+                    <input type="text" class="inputPreco" id="precoInput" name="preco" placeholder="R$ 0000.00" oninput="formatarPreco(this)" required>
+                </div>
+                <div class="entradas">
+                    <label for="quantidade" class="labelEditar">Quantidade*</label>
+                    <input type="number" class="inputQuantidade" id="quantidadeInput" name="quantidade" required>
+                </div>
+                <div id="editar_div_inputDescricao">
+                    <label for="descricao_editar" class="labelDescricao">Descrição:</label>
+                    <textarea type="text" class="editar_inputDescricao" id="editar_inputDescricao" name="descricao_editar" placeholder="Descrição do produto"></textarea>
+                </div>
+                <button onclick="editarProduto(event)" type="submit" id="botaoOK">Ok</button>
+            </form>
+        </section>
+        <div id="divTitulo">
+            <img src="../../assets/seta_volta.png" alt="seta" class="seta_volta_com_titulo">
+            <h2 id="tituloEstoque">Estoque</h2>
+        </div>
+        <section id="secao_principal">
+        </section>
+    </main>
+</body>
+</html>

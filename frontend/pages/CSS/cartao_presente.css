@@ -1,0 +1,59 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    position: relative; /* Pra conseguir usar absolute no secao_centro */
+    background-color: var(--azulEscuro);
+    width: 100vw;
+    display: flex;
+}
+
+#divTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    padding: 3vh 0 0 3vw;
+}
+
+#titulo {
+    font-family: "Inknut Antiqua";
+    font-size: 2vw;
+    font-weight: 400;
+    padding-left: 2vw;
+    color: var(--amarelo);
+}
+
+#secao_centro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Pra conseguir centralizar o elemento na main */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#imagem_centro {
+    height: 30vh;
+}
+
+#textinho_centro {
+    font-family: "Inknut Antiqua";
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--branco);
+}
+
+#botao_comprar_presente {
+    color: var(--branco);
+    background-color: var(--vermelhoAlaranjado);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-family: "Inder";
+    font-size: 1.5vw;
+}

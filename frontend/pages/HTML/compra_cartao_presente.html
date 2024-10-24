@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Presente - Mystic Market</title>
+    <link rel="stylesheet" href="./pages/CSS/compra_cartao_presente.css">
+    <link rel="stylesheet" href="./pages/CSS/style.css">
+    <script defer src="./pages/JS/compra_cartao_presente.js"></script>
+    <script defer src="./pages/JS/geral.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header_esquerda">
+            <a href="/" class="auxHeader"><img src="../../assets/logo.png" alt="Logo" id="logo"></a>
+            <a href="/" id="nome_do_site">Mystic Market</h1></a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="../../assets/coracao.png" alt="Coração" id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="../../assets/carrinho.png" alt="Carrinho" id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="../../assets/usuarioLogado.png" alt="Usuário Logado" id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <main>
+        <section class="secaoCompra">
+            <div id="divTitulo">
+                <img src="../../assets/seta_volta.png" alt="seta" class="seta_volta_com_titulo">
+                <h2 id="tituloCartaoPresente">Cartão Presente</h2>    
+            </div>
+            <form action="/usuario">
+                <div class="entradas">
+                    <label for="valor">Escolha um valor *</label>
+                    <input type="number" id="valor" name="valor" placeholder="Digite um valor" required>
+                </div>
+                <div class="entradas">
+                    <label for="name">Para quem é? *</label>
+                    <div class="nomeInput">
+                        <input type="text" id="name" name="name" placeholder="Nome do destinatário" required>
+                        <input type="email" id="email" name="email" placeholder="Email do destinatário" required>
+                    </div>
+                </div>
+                <div class="entradas">
+                    <label for="texto">Adicione uma mensagem personalizada</label>
+                    <input id="mensagem" name="texto" placeholder="Digite a mensagem (Não ultrapasse 300 caracteres)" required>
+                </div>
+                <div class="entradas">
+                    <label for="name">De quem é? *</label>
+                    <div class="nomeInput">
+                        <input type="text" id="name" name="name" placeholder="Nome do remetente" required>
+                        <input type="email" id="email" name="email" placeholder="Email do remetente" required>
+                    </div>
+                </div>
+                <button type="submit" id="buttonSubmit">Finalizar compra</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereços - Mystic Market</title>
+    <link rel="stylesheet" href="./pages/CSS/endereco.css">
+    <link rel="stylesheet" href="./pages/CSS/style.css">
+    <script defer src="./pages/JS/endereco.js"></script>
+    <script defer src="./pages/JS/geral.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header_esquerda">
+            <a href="/" class="auxHeader"><img src="../../assets/logo.png" alt="Logo" id="logo"></a>
+            <a href="/" id="nome_do_site">Mystic Market</h1></a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="../../assets/coracao.png" alt="Coração" id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="../../assets/carrinho.png" alt="Carrinho" id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="../../assets/usuarioLogado.png" alt="Usuário Logado" id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <main>
+        <section id="secao_adicionar_endereco">
+            <div id="divTitulo">
+                <h3 id="tituloAdicionar">Adicionar endereço</h3>
+                <img src="../../assets/fechar_amarelo.png" alt="Fechar" id="fechar" onclick="botaoFechar()">
+            </div>
+            <section id="formEndereco">
+                <div class="entradas">
+                    <label for="nome">Nome completo*</label>
+                    <input type="text" class="inputEndereco" id="nomeInput" name="nome" placeholder="Nome e sobrenome" required>
+                </div>
+                <div class="entradas">
+                    <label for="pais">País/Região*</label>
+                    <input type="text" class="inputEnderecoPais" id="paisInput" name="pais" value="Brasil" readonly>
+                </div>
+                <div class="entradas">
+                    <label for="cep">CEP*</label>
+                    <input type="text" class="inputEndereco" id="cepInput" name="cep" maxlength = "9" placeholder="Ex.: 12345-678" oninput="formatarCEP(this)" required>
+                </div>
+                <div class="entradas">
+                    <label for="endereco">Endereço*</label>
+                    <input type="text" class="inputEndereco" id="enderecoInput" name="endereco" maxlength="100" required>
+                </div>
+                <div class="entradas">
+                    <label for="numero">Número da Residência*</label>
+                    <input type="number" class="inputEndereco" id="numeroInput" name="numero" placeholder="Número ou s/n" oninput="formatarNumero(this)" required>
+                </div>
+                <div class="entradas">
+                    <label for="complemento">Complemento (opcional)</label>
+                    <input type="text" class="inputEndereco" id="complementoInput" name="complemento" maxlength="14" placeholder="Apartamento, andar, casa">
+                </div>
+                <div class="entradas">
+                    <label for="bairro">Bairro*</label>
+                    <input type="text" class="inputEndereco" id="bairroInput" name="bairro" maxlength="45" required>
+                </div>
+                <div class="entradas">
+                    <label for="cidade">Cidade*</label>
+                    <input type="text" class="inputEndereco" id="cidadeInput" name="cidade" maxlength="100" placeholder="Insira o CEP para preencher a cidade" readonly>
+                </div>
+                <div class="entradas">
+                    <label for="estado">Estado*</label>
+                    <input type="text" class="inputEndereco" id="estadoInput" name="estado" maxlength="2" placeholder="Insira o CEP para preencher o estado" readonly>
+                </div>
+                <div id="divSelecionar">
+                    <img src="../../assets/checkbox_desmarcado.png" alt="Checkbox" id="imagemCheckbox" onclick="marcarCheckbox()">
+                    <p id="textoCheckbox">Tornar meu endereço padrão</p>
+                </div>
+                <button onclick="enviar(event)" id="botaoEnviar">Enviar</button>
+            </section>
+        </section>
+        <section id="secao_titulo">
+            <img src="../../assets/seta_volta.png" alt="seta" class="seta_volta_com_titulo">
+            <div>
+                <h3 id="titulo_amarelo">Endereços</h3>
+                <div id="divLinha"></div>
+            </div>
+        </section>
+        <section id="secao_enderecos">
+            <h3 id="titulo_branco">Endereços cadastrados</h3>
+            <button id="adicionarEndereco" onclick="botaoAdicionar()">Adicionar endereço</button>
+        </section>
+    </main>
+</body>
+</html>

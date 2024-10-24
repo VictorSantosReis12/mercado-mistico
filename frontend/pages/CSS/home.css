@@ -1,0 +1,69 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-image: url("../../assets/background.png");
+    background-size: contain;
+}
+
+#botao {
+    position: absolute;
+    bottom: 3.3%;
+    margin: 0px auto;
+}
+
+.home_background {
+    height: 79.2vh; /* Igual à main */
+}
+
+#home_esquerda {
+    position: absolute;
+    left: 5px; /* Só pra não ficar colado na borda */
+    bottom: 5px;
+}
+
+#home_meio {
+    height: 66.63%;
+    margin-top: 11.41vh; /* 14,41% de 79.2vh, que é a altura da main. Coloquei em % direto e não funcionou */
+}
+
+#home_direita {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+}
+
+.interior_circulo {
+    align-self: center;
+    font-family: "Inknut Antiqua";
+    font-size: calc(52.77vh / 12);
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    /* Todo o código dentro do text-shadow é uma forma de colocar borda no texto de maneira a ser compatível com todos os browsers
+    Eu poderia usar --webkit-text-stroke, mas nem todos os navegadores são compatíveis com webkit */
+    text-shadow: 
+    -1px -1px 0 var(--amarelo),
+    1px -1px 0 var(--amarelo),
+    -1px 1px 0 var(--amarelo),
+    1px 1px 0 var(--amarelo);
+}
+
+#texto_meio {
+    justify-self: center;
+    align-self: center;
+    position: absolute;
+}
+
+#botao_veja_produtos {
+    font-family: "Inknut Antiqua";
+    color: var(--amarelo);
+    background-color: var(--verdeMusgo);
+    border-radius: 15px;
+    padding: 0px 15px;
+    font-size: calc(9vh / 2.56);
+    cursor: pointer;
+}

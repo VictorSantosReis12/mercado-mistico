@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Produto - Mystic Market</title>
+    <link rel="stylesheet" href="../pages/CSS/style.css">
+    <link rel="stylesheet" href="../pages/CSS/pagina_produto.css">
+    <script defer src="../pages/JS/pagina_produto.js"></script>
+    <script defer src="./pages/JS/geral.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="header_esquerda">
+            <a href="/" class="auxHeader"><img src="../../assets/logo.png" alt="Logo" id="logo"></a>
+            <a href="/" id="nome_do_site">Mystic Market</h1></a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="../../assets/coracao.png" alt="Coração"
+                    id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="../../assets/carrinho.png" alt="Carrinho"
+                    id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="../../assets/usuarioLogado.png" alt="Usuário Logado"
+                    id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <main>
+        <img src="../../assets/seta_volta.png" alt="seta" class="seta_volta_sem_titulo">
+        <section class="secaoPrincipal">
+            <div id="divAuxImagem"><img id="imagemProduto"></div>
+            <section id="secaoMeio">
+                <h3 id="tituloProduto"></h3>
+                <p id="descricao"></p>
+            </section>
+            <section id="secaoDireita">
+                <div id="divValor">
+                    <h4 id="tituloTotal">Total:</h4>
+                    <h4 id="valorTotal"></h4>
+                </div>
+                <p id="entregaPrazo">Entrega Imediata</p>
+                <input pattern="\d*" oninput="Number(this.value) < 1 ? this.value = '' : this.value = this.value.replace(/[^0-9]/g, '')" id="quantidade" placeholder="Digite a quantidade">
+                <button id="botaoSubmit" onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

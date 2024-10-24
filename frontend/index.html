@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Market</title>
+    <link rel="stylesheet" href="./pages/CSS/home.css">
+    <link rel="stylesheet" href="./pages/CSS/style.css">
+    <script defer src="./pages/JS/index.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header_esquerda">
+            <img src="./assets/logo.png" alt="Logo" id="logo">
+            <a id="nome_do_site">Mystic Market</a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="./assets/coracao.png" alt="Coração" id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="./assets/carrinho.png" alt="Carrinho" id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="./assets/usuarioLogado.png" alt="Usuário Logado" id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <div id="divisor_header_main"></div>
+    <main>
+        <img src="./assets/homeBackgroundEsquerda.png" alt="Parte Esquerda do Background da Home" class="home_background" id="home_esquerda">
+        <img src="./assets/homeBackgroundMeio.png" alt="Parte Central do Background da Home" class="home_background" id="home_meio">
+        <div id="texto_meio">
+            <h3 class="interior_circulo">Promoções de</h3>
+            <h3 class="interior_circulo">outro mundo.</h3>
+            <h3 class="interior_circulo">Só aqui!</h3>
+        </div>
+        <form action="/catalogo" id="botao"><button id="botao_veja_produtos">Veja nossos produtos</button></form>
+        <img src="./assets/homeBackgroundDireita.png" alt="Parte Direita do Background da Home" class="home_background" id="home_direita">
+    </main>
+</body>
+</html>

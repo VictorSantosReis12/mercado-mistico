@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mystic Market</title>
+    <link rel="stylesheet" href="./pages/CSS/login.css">
+    <link rel="stylesheet" href="./pages/CSS/style.css">
+    <script defer src="./pages/JS/login.js"></script>
+    <script defer src="./pages/JS/geral.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="header_esquerda">
+            <a href="/" class="auxHeader"><img src="../../assets/logo.png" alt="Logo" id="logo"></a>
+            <a href="/" id="nome_do_site">Mystic Market</h1></a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="../../assets/coracao.png" alt="Coração"
+                    id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="../../assets/carrinho.png" alt="Carrinho"
+                    id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="../../assets/usuarioLogado.png" alt="Usuário Logado"
+                    id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <main>
+        <img src="../../assets/seta_volta.png" alt="seta" class="seta_volta_sem_titulo">
+        <section class="secaoLogin">
+            <div class="divTitulo">
+                <h2 id="tituloLogin">Login</h2>
+            </div>
+            <form action="" id="formLogin">
+                <div class="entradas">
+                    <label for="email">Endereço de email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="entradas">
+                    <label for="password">Senha</label>
+                    <div id="divBotao">
+                        <input type="password" id="password" name="password" required>
+                        <a href="#" onclick="olhoFechado()">
+                            <img src="../../assets/olho.png" alt="olho" id="olho">
+                        </a>
+                    </div>
+                </div>
+                <div id="esqueceuSenha">
+                    <p id="slogan">Esqueceu a senha?</p>
+                </div>
+                <button onclick="realizarLogin(event)" type="submit" id="buttonSubmit">Conecte-se</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

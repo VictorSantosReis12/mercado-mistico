@@ -1,0 +1,50 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--azulEscuro);
+    width: 100vw;
+}
+
+#titulo {
+    font-family: "Inknut Antiqua";
+    font-size: 40px;
+    font-weight: 400;
+    padding: 3.2vh 0px 0px 8.9vw;
+    color: var(--amarelo);
+    position: relative;
+    z-index: 1;
+}
+
+#secao_centro {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#imagem_centro {
+    height: 35vh;
+}
+
+#textinho_centro {
+    font-family: "Inknut Antiqua";
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--branco);
+    text-align: center;
+}
+
+/* Essa linha é a que está embaixo do título "Seus registros" */
+#linha_horizontal_divisora {
+    width: calc(91.1vw - 30px);
+    border: 2.5px solid var(--vermelhoAlaranjado);
+    position: relative;
+    z-index: 1;
+    margin-left: 8.9vw;
+}

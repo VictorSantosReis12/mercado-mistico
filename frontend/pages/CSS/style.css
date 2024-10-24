@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
+:root {
+    /* Essas cores são só pra identificar melhor no código as mesmas cores e não ter que ficar repetindo.
+    Se a paleta mudar por algum motivo, é só alterar aqui que todo o código muda também. */
+    --amarelo: #daa520;
+    --azulEscuro: #081b42;
+    --azulMaisEscuro: #08193d;
+    --verdeMusgo: #0a3943;
+    --verdeEscuro: #092E36;
+    --verdeOpaco: #022A33;
+    --vermelhoAlaranjado: #cd5a35;
+    --ciano: #14515E;
+    --branco: #fff;
+    --preto: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    height: calc(17.3vh - 6px);
+    width: calc(95vw - 6px);
+    /* o "-6px" no height e no width é porque a borda tem 3px; em cima e embaixo soma 6px.
+    Aí tem que reduzir pra página não rolar desnecessariamente
+    E o width é 95vw porque tem 5vw de margem pros lados, aí 100 - 5 = 95.*/
+    background-color: var(--azulEscuro);
+    border: 3px solid var(--amarelo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2.75vw 0px 2.25vw;
+    position: fixed;
+    z-index: 10; /* Podia ser só 2, mas por garantia deixei 10 */
+}
+
+main {
+    height: 82.7vh;
+    padding-top: 17.3vh;
+}
+
+button, img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Elementos do header */
+/* Header esquerdo */
+.auxHeader {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    height: 77.42%;
+    cursor: pointer;
+}
+
+#nome_do_site {
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: calc(10vh / 2.56);
+    color: var(--amarelo);
+    user-select: none;
+    cursor: pointer;
+}
+
+#header_esquerda {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Header direito */
+
+#botoes_header_direita_deslogado {
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+#botoes_header_direita_logado {
+    height: 100%;
+    display: none;
+    align-items: center;
+    gap: 1vw;
+}
+
+#botao_logado_coracao {
+    height: 38%;
+    cursor: pointer;
+}
+
+#botao_logado_carrinho {
+    height: 50%;
+    cursor: pointer;
+}
+
+#botao_logado_usuario {
+    height: 40%;
+    cursor: pointer;
+}
+
+#sign_up {
+    font-size: calc(7vh / 2.56);
+    height: 100%;
+    background-color: var(--verdeMusgo);
+    border-radius: 50px;
+    padding: 12px 9.7px;
+    font-family: "Inder";
+    color: var(--amarelo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#login {
+    font-size: calc(7vh / 2.56);
+    height: 100%;
+    background-color: var(--azulEscuro);
+    border: 3px solid var(--verdeMusgo);
+    border-radius: 50px;
+    padding: 9.3px 19.4px;
+    font-family: "Inder";
+    color: var(--amarelo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.seta_volta_com_titulo {
+    height: 8vh;
+}
+
+.seta_volta_sem_titulo {
+    height: 8vh;
+    position: absolute;
+    top: 19vh;
+    left: 3vw;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(115%);
+}
+
+.seta_volta_com_titulo:hover,.seta_volta_sem_titulo:hover {
+    cursor: pointer;
+    filter: brightness(130%);
+}

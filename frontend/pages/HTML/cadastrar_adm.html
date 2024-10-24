@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Administrador - Mystic Market</title>
+    <link rel="stylesheet" href="./pages/CSS/cadastrar_adm.css">
+    <link rel="stylesheet" href="./pages/CSS/style.css">
+    <script defer src="./pages/JS/cadastrar_adm.js"></script>
+    <script defer src="./pages/JS/geral.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header_esquerda">
+            <a href="/" class="auxHeader"><img src="../../assets/logo.png" alt="Logo" id="logo"></a>
+            <a href="/" id="nome_do_site">Mystic Market</h1></a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="../../assets/coracao.png" alt="Coração" id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="../../assets/carrinho.png" alt="Carrinho" id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="../../assets/usuarioLogado.png" alt="Usuário Logado" id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <main>
+        <section id="lista_adm">
+            <div id="divTitulo">
+                <img src="../../assets/seta_volta.png" alt="seta" class="seta_volta_com_titulo">
+                <h3 id="titulo_amarelo">Administradores</h3>
+            </div>
+        </section>
+        <section id="adicionar_adm">
+            <h3 id="titulo_branco">Adicionar novo administrador</h3>
+            <div class="entradas_adicionar">
+                <label class="label_adicionar" for="email">Email do usuario *</label>
+                <input type="email" class="email_adicionar" name="email" placeholder="Insira o email do novo administrador" required>
+            </div>
+            <p id="texto_adicionar">Ao cadastrar um novo administrador, ele terá acesso ao estoque e poderá cadastrar novos produtos e cupons</p>
+            <div id="div_selecionar">
+                <img src="../../assets/checkbox_azul.png" alt="Checkbox" id="checkbox" onclick="marcarCheckbox()">
+                <p id="texto_checkbox">Estou ciente disso</p>
+            </div>
+            <button id="botao_adicionar" onclick="adicionarADM()">Adicionar</button>
+        </section>
+    </main>
+</body>
+</html>

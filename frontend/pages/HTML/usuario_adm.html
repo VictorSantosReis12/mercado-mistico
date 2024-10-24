@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Administrador - Mystic Market</title>
+    <link rel="stylesheet" href="./pages/CSS/usuario_adm.css">
+    <link rel="stylesheet" href="./pages/CSS/style.css">
+    <script defer src="./pages/JS/usuario_adm.js"></script>
+    <script defer src="./pages/JS/geral.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header_esquerda">
+            <a href="/" class="auxHeader"><img src="../../assets/logo.png" alt="Logo" id="logo"></a>
+            <a href="/" id="nome_do_site">Mystic Market</h1></a>
+        </div>
+        <div id="botoes_header_direita_deslogado">
+            <form action="/cadastro"><button id="sign_up">Sign Up</button></form>
+            <form action="/login"><button id="login">Login</button></form>
+        </div>
+        <div id="botoes_header_direita_logado">
+            <a href="/favoritos" class="auxHeader"><img src="../../assets/coracao.png" alt="Coração" id="botao_logado_coracao"></a>
+            <a href="/carrinho" class="auxHeader"><img src="../../assets/carrinho.png" alt="Carrinho" id="botao_logado_carrinho"></a>
+            <a href="/usuario" class="auxHeader"><img src="../../assets/usuarioLogado.png" alt="Usuário Logado" id="botao_logado_usuario"></a>
+        </div>
+    </header>
+    <main>
+        <section id="secaoeditarUsuario">
+            <div id="divEditar">
+                <h3 id="tituloEditar">Editar usuário</h3>
+                <img src="../../assets/fechar_amarelo.png" alt="Fechar" id="fechar" onclick="botaoFechar()">
+            </div>
+            <form>
+                <div class="entradas">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nomeInput" name="nome" required>
+                </div>
+                <div class="entradas">
+                    <label for="senhaAtual">Senha atual</label>
+                    <input type="password" id="senhaAtual" name="senhaAtual" placeholder="Insira sua senha atual" required>
+                </div>
+                <div class="entradas">
+                    <label for="senhaNova">Senha nova</label>
+                    <input type="password" id="senhaNova" name="senhaNova" placeholder="Insira sua senha nova" required>
+                </div>
+                <button type="button" id="botaoEditar" onclick="enviarNovoUsuario()">Editar</button>
+            </form>
+        </section>
+        <section class="secaoPrincipal">
+            <div id="divTitulo">
+                <img src="../../assets/seta_volta.png" alt="seta" class="seta_volta_com_titulo">
+                <h2 id="tituloBemVindo">Olá, nome do usuário</h2>
+            </div>
+            <section class="secoesSecundarias">
+                <a href="/estoque" class="topicosEsquerda" id="estoque">
+                    <img src="../../assets/estoque.png" alt="caixa" class="imagens" id="estoque">
+                    <h2 class="topicosEsquerda_Texto">Estoque</h2>
+                </a>
+                <a href="/cadastrar_produto" class="topicosEsquerda" id="produtos">
+                    <img src="../../assets/registro.png" alt="cupom" class="imagens">
+                    <h2 class="topicosEsquerda_Texto">Cadastro de produtos</h2>
+                </a>
+                <a href="#" class="topicosEsquerda" id="cupons">
+                    <img src="../../assets/cupom.png" alt="casa" class="imagens">
+                    <h2 class="topicosEsquerda_Texto">Cadastro de cupons</h2>
+                </a>
+                <a href="/cadastro_adm" class="topicosEsquerda" id="admins">
+                    <img src="../../assets/administrador.png" alt="Administrador" class="imagens">
+                    <h2 class="topicosEsquerda_Texto">Administradores</h2>
+                </a>
+                <div id="divSair">
+                    <a href="#" onclick="sairConta()" id="sair">Sair</a>
+                    <a href="#" onclick="excluirConta()" id="excluir">Excluir conta</a>
+                </div>
+                <div class="topicoDireita" id="vendas">
+                    <h2 class="topicoDireita_Titulo">Controle de vendas</h2>
+                    <div id="subtopicoDireita">
+                        <h3 class="topicoDireita_Subtitulo_Verde">Você tem</h3>
+                        <h1 class="topicoDireita_Subtitulo_Vermelho">30 vendas</h1>
+                        <h3 class="topicoDireita_Subtitulo_Verde">disponíveis</h3>
+                    </div>
+                    <div id="subtopicoDireita">
+                        <h3 class="topicoDireita_Subtitulo_Branco">Elas geraram</h3>
+                        <h1 class="topicoDireita_Subtitulo_Vermelho">R$ 0000,00</h1>
+                        <h3 class="topicoDireita_Subtitulo_Branco">de lucro</h3>
+                    </div>
+                </div>
+                <div id="div_editar_usuario">
+                    <a href="#" onclick="editarUsuario()" id="editar_usuario">Editar usuário</a> 
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

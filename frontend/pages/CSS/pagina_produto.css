@@ -1,0 +1,132 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    height: 76vh;
+    padding-top: 16vh;
+    padding-bottom: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.secaoPrincipal {
+    width: 92.43vw;
+    height: 59.96vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 4.16vw;
+    padding-top: 15vh;
+}
+
+#divAuxImagem {
+    height: 60vh;
+    aspect-ratio: 1/0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagemProduto {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+#secaoMeio {
+    gap: 5vh;
+    width: 27.08vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#tituloProduto {
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 4.5vh;
+    color: var(--amarelo);
+    line-height: 1;
+}
+
+#descricao {
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 2vh;
+    color: var(--branco);
+}
+
+#botaoSubmit {
+    background-color: var(--amarelo);
+    border-radius: 100px;
+    color: var(--verdeMusgo);
+    font-size: 3vh;
+    font-family: "Inder";
+    font-weight: 400;
+    padding: 0.3rem 0px;
+}
+
+#secaoDireita {
+    background-color: var(--azulMaisEscuro);
+    border-bottom: 2px solid var(--preto);
+    width: 14.13vw;
+    height: 42.07vh;
+    padding: 4vh 2vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#divValor {
+    display: flex;
+    flex-direction: column;
+}
+
+#tituloTotal {
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 3.3vh;
+    color: var(--amarelo);
+}
+
+#valorTotal {
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 3vh;
+    color: var(--branco);
+}
+
+#entregaPrazo {
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 2.5vh;
+    color: var(--vermelhoAlaranjado);
+    text-align: center;
+}
+
+#quantidade {
+    padding: 1vh;
+    height: 3vh;
+    width: 90%;
+    border-radius: 10px;
+    background-color: var(--ciano);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Inder";
+    font-size: 110%;
+}
+
+#quantidade::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Inder";
+}

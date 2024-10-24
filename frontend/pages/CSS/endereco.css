@@ -1,0 +1,238 @@
+body {
+    background-color: var(--azulEscuro);
+}
+
+main {
+    background-color: var(--azulEscuro);
+    width: auto;
+    position: relative;
+}
+
+#secao_adicionar_endereco {
+    position: absolute;
+    top: 19;
+    left: 0;
+    background-color: var(--verdeMusgo);
+    width: 30vw;
+    padding: 3vh 5vw;
+    display: none;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#divTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tituloAdicionar {
+    color: var(--verdeEscuro);
+    font-family: "Inknut Antiqua";
+    font-size: 3.5vh;
+    font-weight: 400;
+}
+
+#fechar {
+    height: 7vh;
+}
+
+#imagemCheckbox {
+    height: 5vh;
+    cursor: pointer;
+    filter: saturate(0%) brightness(200%); /* Deixa o amarelo branco */
+}
+
+#formEndereco {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+}
+
+label {
+    color: var(--branco);
+    font-family: "Inder";
+    font-size: 2.5vh;
+    font-weight: 400;
+}
+
+.entradas {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.inputEndereco {
+    font-family: "Inder";
+    font-weight: 400;
+    background-color: var(--verdeEscuro);
+    color: var(--branco);
+    width: 27.5vw;
+    font-size: 2.5vh;
+    height: 3vh;
+    border-radius: 0.5vh;
+    padding: 1vh 1vw;
+}
+
+.inputEnderecoPais {
+    font-family: "Inder";
+    font-weight: 400;
+    background-color: var(--verdeEscuro);
+    color: var(--branco);
+    width: 27.5vw;
+    font-size: 2.5vh;
+    height: 3vh;
+    border-radius: 0.5vh;
+    padding: 1vh 1vw;
+}
+
+#divSelecionar {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#textoCheckbox {
+    color: var(--branco);
+    font-family: "Inder";
+    font-size: 2.5vh;
+    font-weight: 400;
+}
+
+#botaoEnviar {
+    padding: 1.5vh 2.5vw;
+    background-color: var(--azulEscuro);
+    border-radius: 3vh;
+    font-family: "Inder";
+    font-weight: 400;
+    color: var(--branco);
+    font-size: 2.5vh;
+    align-self: flex-end;
+}
+
+#secao_titulo {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding-left: 8vw;
+}
+
+#titulo_amarelo {
+    color: var(--amarelo);
+    font-family: "Inknut Antiqua";
+    font-size: 5vh;
+    font-weight: 400;
+}
+
+#titulo_branco {
+    color: var(--branco);
+    font-family: "Inknut Antiqua";
+    font-size: 4vh;
+    font-weight: 400;
+}
+
+#divLinha {
+    background-color: var(--vermelhoAlaranjado);
+    height: 1vh;
+    width: 80vw;
+}
+
+#secao_enderecos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10vw;
+    gap: 3vh;
+}
+
+.divCaixa {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--amarelo);
+    border-radius: 5px;
+    padding: 1vh 3vw;
+}
+
+.divCaixaPadrao {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--ciano);
+    border-radius: 5px;
+    padding: 1vh 3vw;
+}
+
+.subdivCaixa_cima {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.subdivCaixa_baixo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textosMenores {
+    color: var(--branco);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: 2.3vh;
+}
+
+#subdivBotao {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#excluir {
+    height: 4vh;
+}
+
+#adicionarEndereco {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--vermelhoAlaranjado);
+    border-radius: 1.5vh;
+    font-family: "Inder";
+    font-weight: 400;
+    font-size: 3vh;
+    color: var(--branco);
+    padding: 1.5vh;
+    margin-right: 2vw;
+    margin-bottom: 4vh;
+    border: 0.5vh solid var(--vermelhoAlaranjado);
+}
+
+#excluir:hover {
+    filter: invert(57%) sepia(74%) saturate(498%) hue-rotate(5deg) brightness(153%) contrast(84%);
+    cursor: pointer;
+}
+
+#editar:hover {
+    filter: invert(57%) sepia(74%) saturate(498%) hue-rotate(5deg) brightness(153%) contrast(84%);
+    cursor: pointer;
+    user-select: none;
+}
+
+#fechar:hover {
+    cursor: pointer;
+    filter: brightness(115%);
+}
+
+/* Largura da barra de rolagem */
+.no-scrollbar::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Remover as setas de aumento/diminuição em inputs do tipo number */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

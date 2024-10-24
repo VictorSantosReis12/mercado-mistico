@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+#login {
+    border: 2px solid var(--vermelhoAlaranjado);
+}
+
+main {
+    background-image: url("../../assets/background.png");
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.secaoLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+}
+
+.divTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.entradas {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#tituloLogin {
+    color: var(--amarelo);
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-size: calc(14vh / 2.56);
+    height: 100%;
+}
+
+#slogan {
+    color: var(--branco);
+    font-size: calc(6vh / 2.56);
+    height: 100%;
+    font-family: "Inder";
+    text-shadow:
+        -0.5px -0.5px 0 var(--amarelo),
+        0.5px -0.5px 0 var(--amarelo),
+        -0.5px 0.5px 0 var(--amarelo),
+        0.5px 0.5px 0 var(--amarelo);
+    text-align: center;
+}
+
+#esqueceuSenha {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+label {
+    color: var(--amarelo);
+    font-family: "Inder";
+    font-size: calc(6vh / 2.56);
+    height: 100%;
+}
+
+input {
+    background-color: var(--verdeMusgo);
+    color: var(--branco);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 15vw;
+    font-size: calc(7vh / 2.56);
+    height: 3vh;
+    border-bottom: 2px solid var(--preto);
+    border-radius: 0.5rem;
+}
+
+#divBotao {
+    background-color: var(--verdeMusgo);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 15vw;
+    height: 3vh;
+    border-bottom: 2px solid var(--preto);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+#password {
+    background-color: transparent;
+    height: 3vh;
+    width: 15vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#olho {
+    height: 60%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(0, -50%);
+}
+
+#buttonSubmit {
+    background-color: var(--vermelhoAlaranjado);
+    color: var(--branco);
+    border: 0;
+    border-radius: 20px;
+    padding: 0px 2.6rem 0px 2.6rem;
+    text-shadow: none;
+    font-family: "Inknut Antiqua";
+    font-size: calc(6vh / 2.56);
+    height: 4.7vh;
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(115%);
+}
+
+#slogan:hover {
+    cursor: pointer;
+}
